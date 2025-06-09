@@ -1,0 +1,40 @@
+:host {
+  --raised-button-font-family: var(--body-font-family);
+  --raised-button-font-weight: var(--body-font-weight);
+  --raised-button-font-size: var(--body-font-size);
+  --raised-button-font-style: var(--body-font-style);
+
+  --raised-button-border-radius: calc(var(--dim-base) / 2);
+  --raised-button-color: #3F51B5;
+  --raised-button-background-color: #FFF;
+
+  --raised-button-vertical-padding: calc(var(--dim-base));
+  --raised-button-horizontal-padding: calc(var(--dim-base) * 2);
+
+  display: block;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+
+  font-family: var(--raised-button-font-family);
+  font-weight: var(--raised-button-font-weight);
+  font-size: var(--raised-button-font-size);
+  font-style: var(--raised-button-font-style);
+
+  border: 1px solid var(--raised-button-color);
+  border-radius: var(--raised-button-border-radius);
+  color: var(--raised-button-color);
+  background: var(--raised-button-background-color);
+
+  padding: var(--raised-button-vertical-padding) var(--raised-button-horizontal-padding);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+
+  transition: box-shadow 75ms ease-in-out, transform 75ms ease-in-out;
+
+  &:active {
+    box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+    transform: scale(.98);
+  }
+}

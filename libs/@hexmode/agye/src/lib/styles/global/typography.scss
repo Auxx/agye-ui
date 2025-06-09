@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --body-font-family: 'Noto Sans', sans-serif;
+  --body-font-weight: 400;
+  --body-font-size: 16px;
+  --body-font-style: normal;
+}
+
+body {
+  font-family: var(--body-font-family);
+  font-optical-sizing: auto;
+  font-weight: var(--body-font-weight);
+  font-size: var(--body-font-size);
+  font-style: var(--body-font-style);
+  font-variation-settings: "wdth" 100;
+}
