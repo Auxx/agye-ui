@@ -50,7 +50,9 @@
         "port": 4400,
         "configDir": "libs/@hexmode/agye/.storybook",
         "browserTarget": "@hexmode/agye:build-storybook",
-        "compodoc": false
+        "compodoc": false,
+        "open": false,
+        "styles": ["libs/@hexmode/agye/.storybook/scss-loader.scss"]
       },
       "configurations": {
         "ci": {
