@@ -4,7 +4,10 @@
   "license": "MIT",
   "scripts": {
     "format": "dprint fmt",
-    "format:check": "dprint check"
+    "format:check": "dprint check",
+    "lint": "nx run-many --all --target=lint",
+    "lint:ci": "nx affected -t lint --base=origin/master --head=HEAD --parallel=3",
+    "prepare": "husky"
   },
   "private": true,
   "dependencies": {
