@@ -3,10 +3,10 @@ import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [ NxWelcomeComponent, RouterModule ],
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'demo';

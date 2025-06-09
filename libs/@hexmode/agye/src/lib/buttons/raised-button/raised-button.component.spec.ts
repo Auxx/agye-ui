@@ -7,7 +7,7 @@ describe('RaisedButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RaisedButtonComponent],
+      imports: [ RaisedButtonComponent ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(RaisedButtonComponent);
