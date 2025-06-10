@@ -1,44 +1,44 @@
 :host {
-  --raised-button-font-family: var(--body-font-family);
-  --raised-button-font-weight: var(--body-font-weight);
-  --raised-button-font-size: var(--body-font-size);
-  --raised-button-font-style: var(--body-font-style);
+  --flat-button-font-family: var(--body-font-family);
+  --flat-button-font-weight: var(--body-font-weight);
+  --flat-button-font-size: var(--body-font-size);
+  --flat-button-font-style: var(--body-font-style);
 
-  --raised-button-border-radius: var(--dim-base);
-  --raised-button-color: inherit;
-  --raised-button-hover-color: inherit;
-  --raised-button-disabled-color: inherit;
-  --raised-button-background-color: inherit;
+  --flat-button-border-radius: var(--dim-base);
+  --flat-button-color: inherit;
+  --flat-button-hover-color: inherit;
+  --flat-button-disabled-color: inherit;
+  --flat-button-background-color: inherit;
 
-  --raised-button-vertical-padding: 0;
-  --raised-button-horizontal-padding: calc(var(--dim-base) * 2);
-  --raised-button-height: calc(var(--dim-base) * 5);
+  --flat-button-vertical-padding: 0;
+  --flat-button-horizontal-padding: calc(var(--dim-base) * 2);
+  --flat-button-height: calc(var(--dim-base) * 5);
 
-  --raised-button-gap: var(--dim-base);
+  --flat-button-gap: var(--dim-base);
 
   display: block;
   width: fit-content;
   height: fit-content;
 
   &[data-color="primary"] {
-    --raised-button-color: var(--color-primary-500);
-    --raised-button-background-color: var(--color-primary-50);
-    --raised-button-hover-color: var(--color-primary-300);
-    --raised-button-disabled-color: var(--color-primary-100);
+    --flat-button-color: var(--color-primary-50);
+    --flat-button-background-color: var(--color-primary-500);
+    --flat-button-hover-color: var(--color-primary-400);
+    --flat-button-disabled-color: var(--color-primary-100);
   }
 
   &[data-color="secondary"] {
-    --raised-button-color: var(--color-secondary-500);
-    --raised-button-background-color: var(--color-secondary-50);
-    --raised-button-hover-color: var(--color-secondary-300);
-    --raised-button-disabled-color: var(--color-secondary-100);
+    --flat-button-color: var(--color-secondary-50);
+    --flat-button-background-color: var(--color-secondary-500);
+    --flat-button-hover-color: var(--color-secondary-400);
+    --flat-button-disabled-color: var(--color-secondary-100);
   }
 
   &[data-color="warn"] {
-    --raised-button-color: var(--color-warn-500);
-    --raised-button-background-color: var(--color-warn-50);
-    --raised-button-hover-color: var(--color-warn-300);
-    --raised-button-disabled-color: var(--color-warn-100);
+    --flat-button-color: var(--color-warn-50);
+    --flat-button-background-color: var(--color-warn-500);
+    --flat-button-hover-color: var(--color-warn-400);
+    --flat-button-disabled-color: var(--color-warn-100);
   }
 }
 
@@ -48,43 +48,41 @@ button {
   justify-content: center;
   white-space: nowrap;
   align-self: stretch;
-  gap: var(--raised-button-gap);
+  gap: var(--flat-button-gap);
   cursor: pointer;
   touch-action: manipulation;
   user-select: none;
 
-  font-family: var(--raised-button-font-family);
-  font-weight: var(--raised-button-font-weight);
-  font-size: var(--raised-button-font-size);
-  font-style: var(--raised-button-font-style);
+  font-family: var(--flat-button-font-family);
+  font-weight: var(--flat-button-font-weight);
+  font-size: var(--flat-button-font-size);
+  font-style: var(--flat-button-font-style);
 
-  border: 1px solid var(--raised-button-color, transparent);
-  border-radius: var(--raised-button-border-radius);
-  color: var(--raised-button-color);
-  background: var(--raised-button-background-color);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+  border: none;
+  border-radius: var(--flat-button-border-radius);
+  color: var(--flat-button-color);
+  background: var(--flat-button-background-color);
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, .15);
 
-  padding: var(--raised-button-vertical-padding) var(--raised-button-horizontal-padding);
-  height: var(--raised-button-height);
+  padding: var(--flat-button-vertical-padding) var(--flat-button-horizontal-padding);
+  height: var(--flat-button-height);
 
   transition: box-shadow 50ms ease-in-out, transform 50ms ease-in-out,
   color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out;
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      color: var(--raised-button-hover-color);
-      border-color: var(--raised-button-hover-color);
+      background-color: var(--flat-button-hover-color);
     }
   }
 
   &:disabled {
-    color: var(--raised-button-disabled-color);
-    border-color: var(--raised-button-disabled-color);
+    background-color: var(--flat-button-disabled-color);
   }
 
   &:active:not([disabled]),
   &.active:not([disabled]) {
-    box-shadow: 0 0 0 rgba(0, 0, 0, .15);
-    transform: scale(.98);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, .2);
+    transform: scale(.95);
   }
 }
