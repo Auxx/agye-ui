@@ -5,13 +5,28 @@
   --raised-button-font-style: var(--body-font-style);
 
   --raised-button-border-radius: calc(var(--dim-base) / 2);
-  --raised-button-color: #3F51B5;
-  --raised-button-background-color: #FFF;
+  --raised-button-color: inherit;
+  --raised-button-background-color: inherit;
 
   --raised-button-vertical-padding: calc(var(--dim-base));
   --raised-button-horizontal-padding: calc(var(--dim-base) * 2);
 
   display: block;
+
+  &[data-color="primary"] {
+    --raised-button-color: var(--color-primary-500);
+    --raised-button-background-color: var(--color-primary-50);
+  }
+
+  &[data-color="secondary"] {
+    --raised-button-color: var(--color-secondary-500);
+    --raised-button-background-color: var(--color-secondary-50);
+  }
+
+  &[data-color="warn"] {
+    --raised-button-color: var(--color-warn-500);
+    --raised-button-background-color: var(--color-warn-50);
+  }
 }
 
 button {
@@ -23,7 +38,7 @@ button {
   font-size: var(--raised-button-font-size);
   font-style: var(--raised-button-font-style);
 
-  border: 1px solid var(--raised-button-color);
+  border: 1px solid var(--raised-button-color, transparent);
   border-radius: var(--raised-button-border-radius);
   color: var(--raised-button-color);
   background: var(--raised-button-background-color);
