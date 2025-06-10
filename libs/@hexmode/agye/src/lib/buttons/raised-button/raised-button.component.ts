@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ButtonDirective } from '../button/button.directive';
 
 @Component({
@@ -10,7 +10,8 @@ import { ButtonDirective } from '../button/button.directive';
   host: {
     '[attr.data-color]': 'color()',
     '[attr.data-disabled]': 'disabled()'
-  }
+  },
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RaisedButtonComponent extends ButtonDirective {
 }
