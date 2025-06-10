@@ -50,6 +50,7 @@ button {
   align-self: stretch;
   gap: var(--raised-button-gap);
   cursor: pointer;
+  touch-action: none;
 
   font-family: var(--raised-button-font-family);
   font-weight: var(--raised-button-font-weight);
