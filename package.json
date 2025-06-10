@@ -7,6 +7,7 @@
     "format:check": "dprint check",
     "build": "nx run-many --all -t build --c production",
     "build:ci": "nx affected -t build --c production --base=origin/master --head=HEAD --parallel=3",
+    "build:storybook": "nx run @hexmode/agye:build-storybook:ci",
     "lint": "nx run-many --all -t lint",
     "lint:ci": "nx affected -t lint --base=origin/master --head=HEAD --parallel=3",
     "test": "nx run-many --all -t test --codeCoverage",
