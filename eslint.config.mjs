@@ -1,29 +1,38 @@
 import nx from '@nx/eslint-plugin';
 
 export default [
-  ...nx.configs['flat/base'],
-  ...nx.configs['flat/typescript'],
-  ...nx.configs['flat/javascript'],
+  ...nx.configs[ 'flat/base' ],
+  ...nx.configs[ 'flat/typescript' ],
+  ...nx.configs[ 'flat/javascript' ],
   {
-    ignores: ['**/dist'],
+    ignores: [ '**/dist' ]
   },
   {
-    files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
+    files: [ '**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx' ],
     rules: {
       '@nx/enforce-module-boundaries': [
         'error',
         {
           enforceBuildableLibDependency: true,
-          allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?js$'],
+          allow: [ '^.*/eslint(\\.base)?\\.config\\.[cm]?js$' ],
           depConstraints: [
             {
               sourceTag: '*',
-              onlyDependOnLibsWithTags: ['*'],
-            },
-          ],
-        },
+              onlyDependOnLibsWithTags: [ '*' ]
+            }
+          ]
+        }
       ],
-    },
+      'no-console': [ 'error' ],
+      '@typescript-eslint/no-explicit-any': [ 'error' ],
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          'argsIgnorePattern': '^_',
+          'caughtErrorsIgnorePattern': '^_'
+        }
+      ]
+    }
   },
   {
     files: [
@@ -34,9 +43,9 @@ export default [
       '**/*.js',
       '**/*.jsx',
       '**/*.cjs',
-      '**/*.mjs',
+      '**/*.mjs'
     ],
     // Override or add rules here
-    rules: {},
-  },
+    rules: {}
+  }
 ];

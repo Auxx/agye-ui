@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HexmodeAgyeComponent } from './agye.component';
+import { RaisedButtonComponent } from './raised-button.component';
 
-describe('HexmodeAgyeComponent', () => {
-  let component: HexmodeAgyeComponent;
-  let fixture: ComponentFixture<HexmodeAgyeComponent>;
+describe('RaisedButtonComponent', () => {
+  let component: RaisedButtonComponent;
+  let fixture: ComponentFixture<RaisedButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HexmodeAgyeComponent],
+      imports: [ RaisedButtonComponent ]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(HexmodeAgyeComponent);
+    fixture = TestBed.createComponent(RaisedButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
