@@ -8,11 +8,13 @@
   --raised-button-color: inherit;
   --raised-button-background-color: inherit;
 
-  --raised-button-vertical-padding: calc(var(--dim-base));
+  --raised-button-vertical-padding: 0;
   --raised-button-horizontal-padding: calc(var(--dim-base) * 2);
+  --raised-button-height: calc(var(--dim-base) * 5);
 
   display: block;
   width: fit-content;
+  height: fit-content;
 
   &[data-color="primary"] {
     --raised-button-color: var(--color-primary-500);
@@ -67,9 +69,10 @@ button {
   border-radius: var(--raised-button-border-radius);
   color: var(--raised-button-color);
   background: var(--raised-button-background-color);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
 
   padding: var(--raised-button-vertical-padding) var(--raised-button-horizontal-padding);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+  height: var(--raised-button-height);
 
   transition: box-shadow 50ms ease-in-out, transform 50ms ease-in-out,
               color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out;
