@@ -50,6 +50,8 @@ button {
   align-self: stretch;
   gap: var(--raised-button-gap);
   cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
 
   font-family: var(--raised-button-font-family);
   font-weight: var(--raised-button-font-weight);
@@ -68,7 +70,7 @@ button {
   transition: box-shadow 50ms ease-in-out, transform 50ms ease-in-out,
   color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out;
 
-  &:hover {
+  &:hover:not(.active) {
     color: var(--raised-button-hover-color);
     border-color: var(--raised-button-hover-color);
   }
@@ -78,7 +80,8 @@ button {
     border-color: var(--raised-button-disabled-color);
   }
 
-  &:active:not([disabled]) {
+  &:active:not([disabled]),
+  &.active:not([disabled]) {
     box-shadow: 0 0 0 rgba(0, 0, 0, .15);
     transform: scale(.98);
   }

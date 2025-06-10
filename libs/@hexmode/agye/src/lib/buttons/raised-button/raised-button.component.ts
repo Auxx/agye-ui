@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, input } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { allButtonTypes, allColors, ButtonType, Color } from '../types';
 
 @Component({
@@ -13,9 +13,11 @@ import { allButtonTypes, allColors, ButtonType, Color } from '../types';
   }
 })
 export class RaisedButtonComponent {
-  type = input<ButtonType>(allButtonTypes[0]);
+  readonly type = input<ButtonType>(allButtonTypes[0]);
 
-  disabled = input(false);
+  readonly disabled = input(false);
 
-  color = input<Color>(allColors[0]);
+  readonly color = input<Color>(allColors[0]);
+
+  protected readonly touched = signal(false);
 }
