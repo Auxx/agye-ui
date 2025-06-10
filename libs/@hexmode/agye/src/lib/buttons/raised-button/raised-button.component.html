@@ -1,5 +1,8 @@
 <button [type]="type()"
-        [disabled]="disabled()">
+        [disabled]="disabled()"
+        [ngClass]="{ active: touched() }"
+        (touchstart)="touched.set(true)"
+        (touchend)="touched.set(false)">
 
   <ng-content></ng-content>
 
