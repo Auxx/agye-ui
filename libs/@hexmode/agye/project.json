@@ -67,7 +67,8 @@
         "outputDir": "dist/storybook/@hexmode/agye",
         "configDir": "libs/@hexmode/agye/.storybook",
         "browserTarget": "@hexmode/agye:build-storybook",
-        "compodoc": false
+        "compodoc": false,
+        "styles": ["libs/@hexmode/agye/.storybook/scss-loader.scss"]
       },
       "configurations": {
         "ci": {
