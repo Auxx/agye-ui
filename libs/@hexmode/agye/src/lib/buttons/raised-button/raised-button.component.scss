@@ -14,6 +14,8 @@
   --raised-button-horizontal-padding: calc(var(--dim-base) * 2);
   --raised-button-height: calc(var(--dim-base) * 5);
 
+  --raised-button-gap: var(--dim-base);
+
   display: block;
   width: fit-content;
   height: fit-content;
@@ -41,7 +43,12 @@
 }
 
 button {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  align-self: stretch;
+  gap: var(--raised-button-gap);
   cursor: pointer;
 
   font-family: var(--raised-button-font-family);
