@@ -8,7 +8,8 @@ import { allButtonTypes, allColors, ButtonType, Color } from '../types';
   templateUrl: './raised-button.component.html',
   styleUrl: './raised-button.component.scss',
   host: {
-    '[attr.data-color]': 'color()'
+    '[attr.data-color]': 'color()',
+    '[attr.data-disabled]': 'disabled()'
   }
 })
 export class RaisedButtonComponent {
