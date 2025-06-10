@@ -4,7 +4,7 @@ import { allButtonTypes, allColors } from '../types';
 import { RaisedButtonComponent } from './raised-button.component';
 
 /**
- * A basic button which can render any valid HTML as its label.
+ * A raised button which can render any valid HTML as its label.
  * It comes with predefined transitions and animations as well as the ability to customise its look and feel.
  * `RaisedButton` also supports custom styling, see below.
  */
@@ -22,7 +22,7 @@ const meta: Meta<Projection<RaisedButtonComponent>> = {
   argTypes: {
     ngContent: {
       name: 'Label',
-      description: 'Button label, passed tag content',
+      description: 'Button label, passed as tag content',
       table: { category: 'Presentation', defaultValue: { summary: '' } }
     },
     color: {
