@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, effect, input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { allButtonTypes, allColors, ButtonType, Color } from '../types';
 
 @Component({
@@ -18,10 +18,4 @@ export class RaisedButtonComponent {
   disabled = input(false);
 
   color = input<Color>(allColors[0]);
-
-  constructor() {
-    effect(() => {
-      console.log('color', this.color());
-    });
-  }
 }
