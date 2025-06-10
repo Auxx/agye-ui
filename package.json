@@ -5,9 +5,9 @@
   "scripts": {
     "format": "dprint fmt",
     "format:check": "dprint check",
-    "build:ci": "nx affected -t build --c production --base=master --head=HEAD --parallel=3",
+    "build:ci": "nx affected -t build --c production --base=origin/master --head=HEAD --parallel=3",
     "lint": "nx run-many --all --target=lint",
-    "lint:ci": "nx affected -t lint --base=master --head=HEAD --parallel=3",
+    "lint:ci": "nx affected -t lint --base=origin/master --head=HEAD --parallel=3",
     "test": "nx run-many --all --target=test --codeCoverage",
     "test:ci": "nx run-many --all --target=test --configuration=ci --parallel=3 --runInBand --ci --code-coverage --coverageReporters=lcov",
     "prepare": "husky"
