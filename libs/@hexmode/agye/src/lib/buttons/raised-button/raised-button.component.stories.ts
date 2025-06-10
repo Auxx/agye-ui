@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { expect } from '@storybook/jest';
-import { within } from '@storybook/testing-library';
 import { Projection } from '../../types';
 import { allButtonTypes, allColors } from '../types';
 import { RaisedButtonComponent } from './raised-button.component';
@@ -46,6 +44,16 @@ const meta: Meta<Projection<RaisedButtonComponent>> = {
       description: 'Flag to disable the button',
       table: { category: 'Behaviour', defaultValue: { summary: 'false' } }
     }
+  },
+
+  parameters: {
+    docs: {
+      description: {
+        component: `
+A basic button which can render any valid HTML as its label.
+        `
+      }
+    }
   }
 };
 export default meta;
@@ -65,11 +73,3 @@ export const Primary: Story = {
     `
   })
 };
-
-// export const Heading: Story = {
-//   args: {},
-//   play: async ({ canvasElement }) => {
-//     const canvas = within(canvasElement);
-//     await expect(canvas.getByText(/raised-button works!/gi)).toBeTruthy();
-//   }
-// };

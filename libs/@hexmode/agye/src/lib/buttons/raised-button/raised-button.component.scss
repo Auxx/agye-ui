@@ -6,6 +6,8 @@
 
   --raised-button-border-radius: var(--dim-base);
   --raised-button-color: inherit;
+  --raised-button-hover-color: inherit;
+  --raised-button-disabled-color: inherit;
   --raised-button-background-color: inherit;
 
   --raised-button-vertical-padding: 0;
@@ -19,40 +21,22 @@
   &[data-color="primary"] {
     --raised-button-color: var(--color-primary-500);
     --raised-button-background-color: var(--color-primary-50);
-
-    &:hover {
-      --raised-button-color: var(--color-primary-300);
-    }
-
-    &[data-disabled="true"] {
-      --raised-button-color: var(--color-primary-100);
-    }
+    --raised-button-hover-color: var(--color-primary-300);
+    --raised-button-disabled-color: var(--color-primary-100);
   }
 
   &[data-color="secondary"] {
     --raised-button-color: var(--color-secondary-500);
     --raised-button-background-color: var(--color-secondary-50);
-
-    &:hover {
-      --raised-button-color: var(--color-secondary-300);
-    }
-
-    &[data-disabled="true"] {
-      --raised-button-color: var(--color-secondary-100);
-    }
+    --raised-button-hover-color: var(--color-secondary-300);
+    --raised-button-disabled-color: var(--color-secondary-100);
   }
 
   &[data-color="warn"] {
     --raised-button-color: var(--color-warn-500);
     --raised-button-background-color: var(--color-warn-50);
-
-    &:hover {
-      --raised-button-color: var(--color-warn-300);
-    }
-
-    &[data-disabled="true"] {
-      --raised-button-color: var(--color-warn-100);
-    }
+    --raised-button-hover-color: var(--color-warn-300);
+    --raised-button-disabled-color: var(--color-warn-100);
   }
 }
 
@@ -75,9 +59,19 @@ button {
   height: var(--raised-button-height);
 
   transition: box-shadow 50ms ease-in-out, transform 50ms ease-in-out,
-              color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out;
+  color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out;
 
-  :host[data-disabled="false"] &:active {
+  &:hover {
+    color: var(--raised-button-hover-color);
+    border-color: var(--raised-button-hover-color);
+  }
+
+  &:disabled {
+    color: var(--raised-button-disabled-color);
+    border-color: var(--raised-button-disabled-color);
+  }
+
+  &:active:not([disabled]) {
     box-shadow: 0 0 0 rgba(0, 0, 0, .15);
     transform: scale(.98);
   }
