@@ -95,31 +95,31 @@ export const DeleteButton: Story = {
  *
  * The following CSS variables can be used for custom styling:
  *
- * | Variable                           |
- * |------------------------------------|
- * | --flat-button-font-family        |
- * | --flat-button-font-weight        |
- * | --flat-button-font-size          |
- * | --flat-button-font-style         |
- * | --flat-button-border-radius      |
- * | --flat-button-color              |
- * | --flat-button-hover-color        |
- * | --flat-button-disabled-color     |
- * | --flat-button-background-color   |
- * | --flat-button-vertical-padding   |
- * | --flat-button-horizontal-padding |
- * | --flat-button-height             |
- * | --flat-button-gap                |
+ * | Variable                    |
+ * |-----------------------------|
+ * | --button-font-family        |
+ * | --button-font-weight        |
+ * | --button-font-size          |
+ * | --button-font-style         |
+ * | --button-border-radius      |
+ * | --button-color              |
+ * | --button-hover-color        |
+ * | --button-disabled-color     |
+ * | --button-background-color   |
+ * | --button-vertical-padding   |
+ * | --button-horizontal-padding |
+ * | --button-height             |
+ * | --button-gap                |
  */
 export const CustomStyling: Story = {
   render: props => ({
     props,
     template: `
     <agye-flat-button
-      [style.--flat-button-color]="'#FEE'"
-      [style.--flat-button-background-color]="'#F30'"
-      [style.--flat-button-hover-color]="'#F52'"
-      [style.--flat-button-border-radius]="'0'">
+      [style.--button-color]="'#FEE'"
+      [style.--button-background-color]="'#F30'"
+      [style.--button-hover-color]="'#F52'"
+      [style.--button-border-radius]="'0'">
       Remove option
     </agye-flat-button>
     `

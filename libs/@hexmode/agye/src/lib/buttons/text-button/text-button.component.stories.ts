@@ -96,30 +96,30 @@ export const DeleteButton: Story = {
  *
  * The following CSS variables can be used for custom styling:
  *
- * | Variable                           |
- * |------------------------------------|
- * | --text-button-font-family        |
- * | --text-button-font-weight        |
- * | --text-button-font-size          |
- * | --text-button-font-style         |
- * | --text-button-border-radius      |
- * | --text-button-color              |
- * | --text-button-hover-color        |
- * | --text-button-disabled-color     |
- * | --text-button-background-color   |
- * | --text-button-vertical-padding   |
- * | --text-button-horizontal-padding |
- * | --text-button-height             |
- * | --text-button-gap                |
+ * | Variable                    |
+ * |-----------------------------|
+ * | --button-font-family        |
+ * | --button-font-weight        |
+ * | --button-font-size          |
+ * | --button-font-style         |
+ * | --button-border-radius      |
+ * | --button-color              |
+ * | --button-hover-color        |
+ * | --button-disabled-color     |
+ * | --button-background-color   |
+ * | --button-vertical-padding   |
+ * | --button-horizontal-padding |
+ * | --button-height             |
+ * | --button-gap                |
  */
 export const CustomStyling: Story = {
   render: props => ({
     props,
     template: `
     <agye-text-button
-      [style.--text-button-color]="'#F30'"
-      [style.--text-button-hover-color]="'#F52'"
-      [style.--text-button-border-radius]="'0'">
+      [style.--button-color]="'#F30'"
+      [style.--button-hover-color]="'#F52'"
+      [style.--button-border-radius]="'0'">
       Remove option
     </agye-text-button>
     `

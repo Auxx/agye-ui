@@ -96,31 +96,31 @@ export const DeleteButton: Story = {
  *
  * The following CSS variables can be used for custom styling:
  *
- * | Variable                           |
- * |------------------------------------|
- * | --raised-button-font-family        |
- * | --raised-button-font-weight        |
- * | --raised-button-font-size          |
- * | --raised-button-font-style         |
- * | --raised-button-border-radius      |
- * | --raised-button-color              |
- * | --raised-button-hover-color        |
- * | --raised-button-disabled-color     |
- * | --raised-button-background-color   |
- * | --raised-button-vertical-padding   |
- * | --raised-button-horizontal-padding |
- * | --raised-button-height             |
- * | --raised-button-gap                |
+ * | Variable                    |
+ * |-----------------------------|
+ * | --button-font-family        |
+ * | --button-font-weight        |
+ * | --button-font-size          |
+ * | --button-font-style         |
+ * | --button-border-radius      |
+ * | --button-color              |
+ * | --button-hover-color        |
+ * | --button-disabled-color     |
+ * | --button-background-color   |
+ * | --button-vertical-padding   |
+ * | --button-horizontal-padding |
+ * | --button-height             |
+ * | --button-gap                |
  */
 export const CustomStyling: Story = {
   render: props => ({
     props,
     template: `
     <agye-raised-button
-      [style.--raised-button-color]="'#FEE'"
-      [style.--raised-button-background-color]="'#F30'"
-      [style.--raised-button-hover-color]="'#FFF'"
-      [style.--raised-button-border-radius]="'0'">
+      [style.--button-color]="'#FEE'"
+      [style.--button-background-color]="'#F30'"
+      [style.--button-hover-color]="'#FFF'"
+      [style.--button-border-radius]="'0'">
       Remove option
     </agye-raised-button>
     `
