@@ -5,7 +5,7 @@ import { ButtonDirective } from '../button/button.directive';
 @Component({
   selector: 'agye-flat-button',
   imports: [ CommonModule ],
-  templateUrl: './flat-button.component.html',
+  templateUrl: '../button/button.template.html',
   styleUrl: './flat-button.component.scss',
   host: {
     '[attr.data-color]': 'color()',

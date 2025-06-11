@@ -2,23 +2,20 @@
 
 :host {
   &[data-color="primary"] {
-    --button-color: var(--color-primary-50);
-    --button-background-color: var(--color-primary-500);
-    --button-hover-color: var(--color-primary-400);
+    --button-color: var(--color-primary-500);
+    --button-hover-color: var(--color-primary-300);
     --button-disabled-color: var(--color-primary-100);
   }
 
   &[data-color="secondary"] {
-    --button-color: var(--color-secondary-50);
-    --button-background-color: var(--color-secondary-500);
-    --button-hover-color: var(--color-secondary-400);
+    --button-color: var(--color-secondary-500);
+    --button-hover-color: var(--color-secondary-300);
     --button-disabled-color: var(--color-secondary-100);
   }
 
   &[data-color="warn"] {
-    --button-color: var(--color-warn-50);
-    --button-background-color: var(--color-warn-500);
-    --button-hover-color: var(--color-warn-400);
+    --button-color: var(--color-warn-500);
+    --button-hover-color: var(--color-warn-300);
     --button-disabled-color: var(--color-warn-100);
   }
 }
@@ -29,17 +26,19 @@ button {
   background: var(--button-background-color);
   box-shadow: inset 0 0 0 rgba(0, 0, 0, .15);
 
-  transition: box-shadow 50ms ease-in-out, transform 50ms ease-in-out,
+  transition: box-shadow 75ms ease-in-out, transform 75ms ease-in-out,
   color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out;
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      background-color: var(--button-hover-color);
+      color: var(--button-hover-color);
+      border-color: var(--button-hover-color);
     }
   }
 
   &:disabled {
-    background-color: var(--button-disabled-color);
+    color: var(--button-disabled-color);
+    border-color: var(--button-disabled-color);
   }
 
   &:active:not([disabled]),

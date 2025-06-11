@@ -1,0 +1,43 @@
+:host {
+  --button-font-family: var(--body-font-family);
+  --button-font-weight: var(--body-font-weight);
+  --button-font-size: var(--body-font-size);
+  --button-font-style: var(--body-font-style);
+
+  --button-border-radius: var(--dim-base);
+  --button-color: inherit;
+  --button-hover-color: inherit;
+  --button-disabled-color: inherit;
+  --button-background-color: inherit;
+
+  --button-vertical-padding: 0;
+  --button-horizontal-padding: calc(var(--dim-base) * 2);
+  --button-height: calc(var(--dim-base) * 5);
+
+  --button-gap: var(--dim-base);
+
+  display: block;
+  width: fit-content;
+  height: fit-content;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  align-self: stretch;
+  gap: var(--button-gap);
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size);
+  font-style: var(--button-font-style);
+
+  padding: var(--button-vertical-padding) var(--button-horizontal-padding);
+  height: var(--button-height);
+  border-radius: var(--button-border-radius);
+}

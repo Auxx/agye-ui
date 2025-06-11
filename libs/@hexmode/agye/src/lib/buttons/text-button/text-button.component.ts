@@ -3,15 +3,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ButtonDirective } from '../button/button.directive';
 
 @Component({
-  selector: 'agye-raised-button',
+  selector: 'agye-text-button',
   imports: [ CommonModule ],
   templateUrl: '../button/button.template.html',
-  styleUrl: './raised-button.component.scss',
+  styleUrl: './text-button.component.scss',
   host: {
     '[attr.data-color]': 'color()',
     '[attr.data-disabled]': 'disabled()'
   },
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class RaisedButtonComponent extends ButtonDirective {
-}
+export class TextButtonComponent extends ButtonDirective {}

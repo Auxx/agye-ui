@@ -4,9 +4,10 @@ import { allButtonTypes, allColors } from '../types';
 import { FlatButtonComponent } from './flat-button.component';
 
 /**
- * A flat button which can render any valid HTML as its label.
- * It comes with predefined transitions and animations as well as the ability to customise its look and feel.
- * `FlatButton` also supports custom styling, see below.
+ * A `FlatButton` component can render any valid HTML as its label.
+ * It includes predefined transitions and animations, and allows full customisation
+ * of its appearance and behaviour.
+ * `FlatButton` also supports custom styling, as detailed below.
  */
 const meta: Meta<Projection<FlatButtonComponent>> = {
   component: FlatButtonComponent,
@@ -87,38 +88,38 @@ export const DeleteButton: Story = {
 };
 
 /**
- * It is possible to customise most visual aspects of `FlatButton`
- * with the help of CSS variables. CSS variables can be set either through
- * a stylesheet or with the help of Angular `[style]` binding as seen in the example below.
- * The `[style]` binding can also accept a single object with multiple variables.
+ * It is possible to customise most visual aspects of `FlatButton` using CSS variables.
+ * These variables can be set either via a stylesheet or using Angular `[style]` binding,
+ * as shown in the example below. The `[style]` binding can also accept a single object
+ * containing multiple variables.
  *
  * The following CSS variables can be used for custom styling:
  *
- * | Variable                           |
- * |------------------------------------|
- * | --flat-button-font-family        |
- * | --flat-button-font-weight        |
- * | --flat-button-font-size          |
- * | --flat-button-font-style         |
- * | --flat-button-border-radius      |
- * | --flat-button-color              |
- * | --flat-button-hover-color        |
- * | --flat-button-disabled-color     |
- * | --flat-button-background-color   |
- * | --flat-button-vertical-padding   |
- * | --flat-button-horizontal-padding |
- * | --flat-button-height             |
- * | --flat-button-gap                |
+ * | Variable                    |
+ * |-----------------------------|
+ * | --button-font-family        |
+ * | --button-font-weight        |
+ * | --button-font-size          |
+ * | --button-font-style         |
+ * | --button-border-radius      |
+ * | --button-color              |
+ * | --button-hover-color        |
+ * | --button-disabled-color     |
+ * | --button-background-color   |
+ * | --button-vertical-padding   |
+ * | --button-horizontal-padding |
+ * | --button-height             |
+ * | --button-gap                |
  */
 export const CustomStyling: Story = {
   render: props => ({
     props,
     template: `
     <agye-flat-button
-      [style.--flat-button-color]="'#FEE'"
-      [style.--flat-button-background-color]="'#F30'"
-      [style.--flat-button-hover-color]="'#F52'"
-      [style.--flat-button-border-radius]="'0'">
+      [style.--button-color]="'#FEE'"
+      [style.--button-background-color]="'#F30'"
+      [style.--button-hover-color]="'#F52'"
+      [style.--button-border-radius]="'0'">
       Remove option
     </agye-flat-button>
     `
