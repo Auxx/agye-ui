@@ -49,6 +49,7 @@
     "@storybook/addon-essentials": "^8.6.11",
     "@storybook/addon-interactions": "^8.6.11",
     "@storybook/angular": "^8.6.11",
+    "@storybook/blocks": "^8.6.11",
     "@storybook/core-server": "^8.6.11",
     "@storybook/jest": "^0.2.3",
     "@storybook/test-runner": "^0.22.0",

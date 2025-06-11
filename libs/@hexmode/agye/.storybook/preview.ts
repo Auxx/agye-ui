@@ -1,7 +1,14 @@
 import { Preview } from '@storybook/angular';
 
 const preview: Preview = {
-  tags: [ 'autodocs' ]
+  tags: [ 'autodocs' ],
+  parameters: {
+    options: {
+      storySort: {
+        order: [ 'Intro', 'Components' ]
+      }
+    }
+  }
 };
 
 export default preview;
