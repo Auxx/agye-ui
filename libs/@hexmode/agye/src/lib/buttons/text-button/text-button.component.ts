@@ -5,7 +5,7 @@ import { ButtonDirective } from '../button/button.directive';
 @Component({
   selector: 'agye-text-button',
   imports: [ CommonModule ],
-  templateUrl: './text-button.component.html',
+  templateUrl: '../button/button.template.html',
   styleUrl: './text-button.component.scss',
   host: {
     '[attr.data-color]': 'color()',

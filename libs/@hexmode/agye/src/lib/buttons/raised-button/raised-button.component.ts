@@ -5,7 +5,7 @@ import { ButtonDirective } from '../button/button.directive';
 @Component({
   selector: 'agye-raised-button',
   imports: [ CommonModule ],
-  templateUrl: './raised-button.component.html',
+  templateUrl: '../button/button.template.html',
   styleUrl: './raised-button.component.scss',
   host: {
     '[attr.data-color]': 'color()',
