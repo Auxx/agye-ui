@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { Projection } from '../../types';
 import { allButtonTypes, allColors } from '../types';
-import { RaisedButtonComponent } from './raised-button.component';
+import { TextButtonComponent } from './text-button.component';
 
 /**
- * A `RaisedButton` component can render any valid HTML as its label.
+ * A `TextButton` component can render any valid HTML as its label.
  * It includes predefined transitions and animations, and allows full customisation
  * of its appearance and behaviour.
- * `RaisedButton` also supports custom styling, as detailed below.
+ * `TextButton` also supports custom styling, as detailed below.
  */
-const meta: Meta<Projection<RaisedButtonComponent>> = {
-  component: RaisedButtonComponent,
-  title: 'Components/Buttons/RaisedButton',
+const meta: Meta<Projection<TextButtonComponent>> = {
+  component: TextButtonComponent,
+  title: 'Components/Buttons/TextButton',
 
   args: {
     ngContent: 'New item',
@@ -53,19 +53,19 @@ const meta: Meta<Projection<RaisedButtonComponent>> = {
   }
 };
 export default meta;
-type Story = StoryObj<Projection<RaisedButtonComponent>>;
+type Story = StoryObj<Projection<TextButtonComponent>>;
 
 export const Primary: Story = {
   tags: [ '!autodocs' ],
   render: props => ({
     props,
     template: `
-    <agye-raised-button
+    <agye-text-button
       [type]="type"
       [disabled]="disabled"
       [color]="color">
       {{ ngContent }}
-    </agye-raised-button>
+    </agye-text-button>
     `
   })
 };
@@ -74,7 +74,7 @@ export const SimplePrimaryButton: Story = {
   render: props => ({
     props,
     template: `
-    <agye-raised-button>Apply</agye-raised-button>
+    <agye-text-button>Apply</agye-text-button>
     `
   })
 };
@@ -83,13 +83,13 @@ export const DeleteButton: Story = {
   render: props => ({
     props,
     template: `
-    <agye-raised-button color="warn">Delete</agye-raised-button>
+    <agye-text-button color="warn">Delete</agye-text-button>
     `
   })
 };
 
 /**
- * It is possible to customise most visual aspects of `RaisedButton` using CSS variables.
+ * It is possible to customise most visual aspects of `TextButton` using CSS variables.
  * These variables can be set either via a stylesheet or using Angular `[style]` binding,
  * as shown in the example below. The `[style]` binding can also accept a single object
  * containing multiple variables.
@@ -98,31 +98,30 @@ export const DeleteButton: Story = {
  *
  * | Variable                           |
  * |------------------------------------|
- * | --raised-button-font-family        |
- * | --raised-button-font-weight        |
- * | --raised-button-font-size          |
- * | --raised-button-font-style         |
- * | --raised-button-border-radius      |
- * | --raised-button-color              |
- * | --raised-button-hover-color        |
- * | --raised-button-disabled-color     |
- * | --raised-button-background-color   |
- * | --raised-button-vertical-padding   |
- * | --raised-button-horizontal-padding |
- * | --raised-button-height             |
- * | --raised-button-gap                |
+ * | --text-button-font-family        |
+ * | --text-button-font-weight        |
+ * | --text-button-font-size          |
+ * | --text-button-font-style         |
+ * | --text-button-border-radius      |
+ * | --text-button-color              |
+ * | --text-button-hover-color        |
+ * | --text-button-disabled-color     |
+ * | --text-button-background-color   |
+ * | --text-button-vertical-padding   |
+ * | --text-button-horizontal-padding |
+ * | --text-button-height             |
+ * | --text-button-gap                |
  */
 export const CustomStyling: Story = {
   render: props => ({
     props,
     template: `
-    <agye-raised-button
-      [style.--raised-button-color]="'#FEE'"
-      [style.--raised-button-background-color]="'#F30'"
-      [style.--raised-button-hover-color]="'#FFF'"
-      [style.--raised-button-border-radius]="'0'">
+    <agye-text-button
+      [style.--text-button-color]="'#F30'"
+      [style.--text-button-hover-color]="'#F52'"
+      [style.--text-button-border-radius]="'0'">
       Remove option
-    </agye-raised-button>
+    </agye-text-button>
     `
   })
 };

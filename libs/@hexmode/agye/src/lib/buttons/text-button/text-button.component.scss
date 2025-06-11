@@ -1,0 +1,87 @@
+:host {
+  --text-button-font-family: var(--body-font-family);
+  --text-button-font-weight: var(--body-font-weight);
+  --text-button-font-size: var(--body-font-size);
+  --text-button-font-style: var(--body-font-style);
+
+  --text-button-border-radius: var(--dim-base);
+  --text-button-color: inherit;
+  --text-button-hover-color: inherit;
+  --text-button-disabled-color: inherit;
+  --text-button-background-color: trasparent;
+
+  --text-button-vertical-padding: 0;
+  --text-button-horizontal-padding: calc(var(--dim-base) * 2);
+  --text-button-height: calc(var(--dim-base) * 5);
+
+  --text-button-gap: var(--dim-base);
+
+  display: block;
+  width: fit-content;
+  height: fit-content;
+
+  &[data-color="primary"] {
+    --text-button-color: var(--color-primary-500);
+    --text-button-hover-color: var(--color-primary-300);
+    --text-button-disabled-color: var(--color-primary-100);
+  }
+
+  &[data-color="secondary"] {
+    --text-button-color: var(--color-secondary-500);
+    --text-button-hover-color: var(--color-secondary-300);
+    --text-button-disabled-color: var(--color-secondary-100);
+  }
+
+  &[data-color="warn"] {
+    --text-button-color: var(--color-warn-500);
+    --text-button-hover-color: var(--color-warn-300);
+    --text-button-disabled-color: var(--color-warn-100);
+  }
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  align-self: stretch;
+  gap: var(--text-button-gap);
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+
+  font-family: var(--text-button-font-family);
+  font-weight: var(--text-button-font-weight);
+  font-size: var(--text-button-font-size);
+  font-style: var(--text-button-font-style);
+
+  border: none;
+  border-radius: var(--text-button-border-radius);
+  color: var(--text-button-color);
+  background: var(--text-button-background-color);
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, .15);
+
+  padding: var(--text-button-vertical-padding) var(--text-button-horizontal-padding);
+  height: var(--text-button-height);
+
+  transition: box-shadow 75ms ease-in-out, transform 75ms ease-in-out,
+  color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--text-button-hover-color);
+      border-color: var(--text-button-hover-color);
+    }
+  }
+
+  &:disabled {
+    color: var(--text-button-disabled-color);
+    border-color: var(--text-button-disabled-color);
+  }
+
+  &:active:not([disabled]),
+  &.active:not([disabled]) {
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, .2);
+    transform: scale(.95);
+  }
+}

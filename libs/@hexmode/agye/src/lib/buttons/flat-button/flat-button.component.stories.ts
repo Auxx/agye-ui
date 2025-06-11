@@ -4,9 +4,10 @@ import { allButtonTypes, allColors } from '../types';
 import { FlatButtonComponent } from './flat-button.component';
 
 /**
- * A flat button which can render any valid HTML as its label.
- * It comes with predefined transitions and animations as well as the ability to customise its look and feel.
- * `FlatButton` also supports custom styling, see below.
+ * A `FlatButton` component can render any valid HTML as its label.
+ * It includes predefined transitions and animations, and allows full customisation
+ * of its appearance and behaviour.
+ * `FlatButton` also supports custom styling, as detailed below.
  */
 const meta: Meta<Projection<FlatButtonComponent>> = {
   component: FlatButtonComponent,
@@ -87,10 +88,10 @@ export const DeleteButton: Story = {
 };
 
 /**
- * It is possible to customise most visual aspects of `FlatButton`
- * with the help of CSS variables. CSS variables can be set either through
- * a stylesheet or with the help of Angular `[style]` binding as seen in the example below.
- * The `[style]` binding can also accept a single object with multiple variables.
+ * It is possible to customise most visual aspects of `FlatButton` using CSS variables.
+ * These variables can be set either via a stylesheet or using Angular `[style]` binding,
+ * as shown in the example below. The `[style]` binding can also accept a single object
+ * containing multiple variables.
  *
  * The following CSS variables can be used for custom styling:
  *
